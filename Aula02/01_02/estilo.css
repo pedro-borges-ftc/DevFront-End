@@ -41,6 +41,20 @@ body{
     color: var(--text-color);
 }
 
+header{
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+    border: 3px solid;
+}
+
+footer{
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+    border: 3px solid;
+}
+
 div{
     text-align: center;
     width: 300px;
@@ -49,7 +63,8 @@ div{
 }
 
 div.table{
-    padding-left: 15%;
+    padding-left: 2rem;
+    /*padding-right: 1rem;*/
 }
 
 div.list{
