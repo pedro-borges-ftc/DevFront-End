@@ -1,0 +1,37 @@
+p{
+    color:blue;
+    width: 500px;
+    border: 1px solid black;
+}
+html{
+    background-color: azure;
+
+}
+body{
+    width: 700px;
+    /*flex box*/ 
+    margin: 0 auto;
+    padding: 0 20px 30px 20px ;
+    border: 3px solid black;
+}
+h1{
+    margin: 0 auto;
+    padding: 20px 0 ;
+    border: 2px solid blue;
+}
+
+figure{
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+@keyframes slidein {
+    from {
+        margin-left: 100%;
+        width: 300%
+    }
+
+    to {
+        margin-left: 0%;
+        width: 100%
+    }
+}

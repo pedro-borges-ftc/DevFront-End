@@ -1,0 +1,170 @@
+body{
+    font-family: Nunito, sans-serif;
+    color: #1c1c1c;
+}
+h1,h2,h3{
+    font-family: Asap, sans-serif;
+    color: #000000;
+}
+
+/*Navegação*/
+nav{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #177232;
+}
+
+nav > a{
+    text-decoration: none;
+    color: white;
+    font-weight: 800;
+    font-size: 32px;
+    font-family: Yellowtail, sans-serif;
+}
+
+nav > ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li{
+    text-align: center;
+}
+
+nav ul li a{
+    display: inline-block;
+    padding: 10px 0;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+}
+
+/*Cabeçalho*/
+header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    color: white;
+    text-align: center;
+    padding: 20px;
+
+    background-image: url(../img/fundo-de-tecnologia.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+}
+
+header h1{
+    color: white;
+    margin-bottom: 1em;
+}
+
+header a{
+    color: white;
+    background-color: #177232;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/*Formação e Experiências*/
+#formacao,#experiencias{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #177232;
+    padding: 10px;
+    width: 100%;
+    color: white;
+}
+
+#formacao h2,#experiencias h2{
+    color: white;
+}
+
+#formacao p,#experiencias p{
+    margin-bottom: 1em;
+    max-width: 1000px;
+}
+
+/*Conhecimentos*/
+#conhecimentos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+}
+
+#conhecimentos div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 30px;
+}
+
+#conhecimentos h2{
+    margin-bottom: 10px;
+}
+
+#conhecimentos img{
+    width: 50%;
+}
+
+/*Contatos*/
+#contatos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+#contatos img{
+    width: 25%;
+}
+
+#contatos h2{
+   color: black;
+}
+
+#contatos div{
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 10px;
+}
+
+footer{
+    text-align: center;
+    padding: 10px;
+    background-color: #177232;
+    color: white
+}
+
+footer  a{
+    color: white;
+    background-color: #177232;
+    text-decoration: none;
+    padding: 5px;
+}
+
+/*Responsividade*/
+@media screen and (min-width:768px){
+    /*nav*/
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav ul{
+        flex-direction: row;
+        width: 70%;
+    }
+    nav ul li a{        
+        padding: 25px;
+    }
+}

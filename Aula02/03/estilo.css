@@ -1,0 +1,13 @@
+.gridlayout{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: 2px solid blue;
+    border-radius: 5px;
+    background-color: azure;
+}
+div{
+    display: grid;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: gray;
+}

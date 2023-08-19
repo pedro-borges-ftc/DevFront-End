@@ -1,0 +1,31 @@
+/*------Tags de conteúdo--------*/
+ul{
+    list-style: none;
+    margin: 12px 0;
+}
+ol{
+    list-style: none;
+    margin: 12px 0;
+}
+p{
+    font-size: 14px;
+    opacity: 0.8;
+    margin-bottom: 16px;
+    color: var(--text-color);
+}
+a{ 
+    text-decoration: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    opacity: 0.6;
+}
+a:hover{
+    opacity: 1;
+}
+div.table{
+    padding-left: 15%;
+}
+div.list{
+    border-color: var(--text-color);
+    border: 2px solid;
+}
