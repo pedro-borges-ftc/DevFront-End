@@ -126,11 +126,17 @@ header a{
 }
 
 #contatos img{
-    width: 10%;
+    width: 25%;
 }
 
 #contatos h2{
    color: black;
+}
+
+#contatos div{
+    flex-grow: 1;
+    flex-basis: 150px;
+    padding: 0 10px;
 }
 
 footer{
@@ -161,5 +167,4 @@ footer  a{
     nav ul li a{        
         padding: 25px;
     }
-    
 }
