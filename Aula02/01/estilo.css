@@ -33,7 +33,6 @@ body{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
-<<<<<<< HEAD:Aula02/01_02/estilo.css
 
 header{
     text-align: center;
@@ -49,13 +48,10 @@ footer{
     border: 3px solid;
 }
 
-=======
->>>>>>> b4c9e473866fd615da87ea4583a9bd0690b39632:Aula02/01/estilo.css
 div{
     text-align: center;
     width: 300px;
     margin: 10px auto;
-<<<<<<< HEAD:Aula02/01_02/estilo.css
     /*border: 3px solid;*/
 }
 
@@ -67,6 +63,4 @@ div.table{
 div.list{
     border-color: var(--text-color);
     border: 2px solid;
-=======
->>>>>>> b4c9e473866fd615da87ea4583a9bd0690b39632:Aula02/01/estilo.css
 }
