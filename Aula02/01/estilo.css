@@ -33,8 +33,34 @@ body{
     background-color: var(--bg-color);
     color: var(--text-color);
 }
+
+header{
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+    border: 3px solid;
+}
+
+footer{
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+    border: 3px solid;
+}
+
 div{
     text-align: center;
     width: 300px;
     margin: 10px auto;
+    /*border: 3px solid;*/
+}
+
+div.table{
+    padding-left: 2rem;
+    /*padding-right: 1rem;*/
+}
+
+div.list{
+    border-color: var(--text-color);
+    border: 2px solid;
 }
