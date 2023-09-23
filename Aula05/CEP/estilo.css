@@ -1,0 +1,62 @@
+/*------Tags estruturais--------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /*variáveis*/
+    --bg-color: rgb(73,71,71);
+    --text-color: white;
+}
+
+body.white{
+    --bg-color: white ;
+    --text-color: rgb(73,71,71);
+}
+
+body.blue{
+    --bg-color: rgb(43, 6, 154) ;
+    --text-color: rgb(242,239,239);
+}
+
+body.purple{
+    --bg-color: rgb(84, 46, 199) ;
+    --text-color: rgb(242,239,239);
+}
+
+body.red{
+    --bg-color: rgb(168, 67, 78) ;
+    --text-color: rgb(242,239,239);
+}
+
+body.orange{
+    --bg-color: rgb(204, 129, 8) ;
+    --text-color: rgb(242,239,239);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+div{
+    text-align: center;
+    width: 300px;
+    margin: 10px auto;
+    /*border: 3px solid;*/
+}
+
+div.table{
+    padding-left: 15%;
+}
+
+div.list{
+    border-color: var(--text-color);
+    border: 2px solid;
+}
+
+table{
+    margin: auto;
+}

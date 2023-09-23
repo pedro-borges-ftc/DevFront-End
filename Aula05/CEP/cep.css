@@ -1,0 +1,26 @@
+body{
+    background-color: rgb(29, 150, 225);
+    color: white;
+}
+section{
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    margin: auto;
+}
+div{
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+table{
+    margin: auto;
+}
+footer, header, div{
+    text-align: center;
+}
+button{
+    background-color: blue;
+    color: white;
+    margin-top: 8px;
+}

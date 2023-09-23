@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Via Cep</title>
+    <link rel="stylesheet" href="cep.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="cep.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Consulta de CEP</h1>
+    </header>
+    <section>
+        <div id="diventrada">
+            <label for="">Digite o CEP</label><br>
+            <input type="number" id="txtcep"><br>
+            <button onclick="consultaCep()">Consultar</button>
+        </div>
+        <div id="divtabela">
+            <table id="tblcep" border="1">
+                <thead>
+                    <td>Item</td>
+                    <td>Valor</td>
+                </thead>
+                <tbody></tbody>
+            </table>
+        </div>
+
+        <div id="divresultado">
+
+        </div>
+    </section>
+    <footer>Desenvolvido em TPW</footer>
+</body>
+
+</html>
