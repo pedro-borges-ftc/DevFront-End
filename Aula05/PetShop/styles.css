@@ -1,0 +1,68 @@
+body{
+    background-color: whitesmoke;
+}
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.textMeio{
+    text-align: center;
+    font-size: 20px;
+    margin-top: 40px;
+}
+
+.servicos-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.pagination{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.feedbacks-container{
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 100px;
+}
+
+.footerPage{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 15px;
+    background-color: grey;
+    color: white;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+@media screen and (max-width: 1024px) {
+    .feedbacks-container{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 50px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .feedbacks-container{
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 20px;
+    }
+}
