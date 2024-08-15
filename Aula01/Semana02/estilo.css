@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(234, 80, 19);
+}
+h4{
+    color: white;
+    border: 3px solid white;
+}
+p{
+    color: white;
+    font-size: large;
+    border: 1px solid white;
+}

@@ -29,6 +29,10 @@ body.orange{
     --bg-color: rgb(204, 129, 8) ;
     --text-color: rgb(242,239,239);
 }
+body.dark{
+    --bg-color: rgb(22, 22, 21) ;
+    --text-color: rgb(242,239,239);
+}
 body{
     background-color: var(--bg-color);
     color: var(--text-color);
