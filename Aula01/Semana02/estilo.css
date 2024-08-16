@@ -10,3 +10,25 @@ p{
     font-size: large;
     border: 1px solid white;
 }
+
+/* Estilo para o botão flutuante */
+.whatsapp-button {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 50px;
+    right: 20px;
+    background-color: white;
+    color:green;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 3px #948484;
+    z-index: 100;
+    /*padding: 10px;*/
+}
+
+img{
+    max-height: 60px;
+    max-width: 60px;
+}
