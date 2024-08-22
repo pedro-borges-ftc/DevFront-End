@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo DOM HTML</title>
+</head>
+<body>
+    <p id="demonstracao"> Clique no botão para mudar a cor desse parágrafo. </p>
+
+    <button onclick="corVermelho()"> VERMELHO </button>
+
+    <button onclick="corAzul()"> AZUL </button>
+
+<script>
+    function corVermelho() {
+        var x = document.getElementById("demonstracao")
+        x.style.color = "red"
+    }
+    function corAzul() {
+        var x = document.getElementById("demonstracao")
+        x.style.color = "blue"
+    }
+</script>
+</body>
+</html>

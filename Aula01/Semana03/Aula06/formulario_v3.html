@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário v3</title>
+
+    <style>
+        input{
+            width: 150px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+        }
+        textarea{
+            width: 150px;
+            border: 1px solid blue;
+        }
+        button{
+            width: 150px;
+            background-color: black;
+            color: white;
+        }
+        div{
+            border: 3px solid blue;
+            background-color: aquamarine;
+            text-align: center;
+        }
+        h4{
+            text-align: center;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <!--Cabeçalho da página -->
+    <header>
+        <h4>Meu cabeçalho</h4>
+    </header>
+    <!--Conteúdo da página -->
+    <div>
+        Nome<br>
+        <input type="text" name="campo1" id="campo1"><br>
+        
+        Data Nascimento<br>
+        <input type="date" name="campo2" id="campo2"><br>
+        
+        <p><button onclick="imprimir()"> Imprimir </button></p>
+        
+        Resultado<br>
+        <textarea name="resultado" id="resultado" cols="20" rows="5"></textarea>
+    </div>
+   <!--Rodapé da página -->
+    <footer>
+        <h4>Meu rodapé</h4>
+    </footer>
+
+    <script>
+        function imprimir(){
+            //métodos de leitura dos campos no HTML
+            var nome = document.getElementById("campo1")
+            var nascimento = document.getElementById("campo2")
+            var resultado = document.getElementById("resultado")
+
+            //método de escrita no HTML
+            resultado.value = nome.value + " nasceu no dia " + nascimento.value
+        }
+    </script>
+</body>
+</html>
