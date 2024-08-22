@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -40,10 +40,10 @@
     <!--Conteúdo da página -->
     <div>
         Nome<br>
-        <input type="text" name="campo1" id="campo1"><br>
+        <input type="text" name="nome" id="nome"><br>
         
         Data Nascimento<br>
-        <input type="date" name="campo2" id="campo2"><br>
+        <input type="date" name="nascimento" id="nascimento"><br>
         
         <p><button onclick="imprimir()"> Imprimir </button></p>
         
@@ -58,8 +58,8 @@
     <script>
         function imprimir(){
             //métodos de leitura dos campos no HTML
-            var nome = document.getElementById("campo1")
-            var nascimento = document.getElementById("campo2")
+            var nome = document.getElementById("nome")
+            var nascimento = document.getElementById("nascimento")
             var resultado = document.getElementById("resultado")
 
             //método de escrita no HTML
