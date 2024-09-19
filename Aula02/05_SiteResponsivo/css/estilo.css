@@ -153,7 +153,7 @@ footer  a{
     padding: 5px;
 }
 
-/*Responsividade*/
+/*Responsividade Tablet*/
 @media screen and (min-width:768px){
     /*nav*/
     nav{
@@ -168,3 +168,19 @@ footer  a{
         padding: 25px;
     }
 }
+
+/*Responsividade Mobile*/
+/*@media screen and (min-width:396px){
+    /*nav*//*
+    nav{
+        flex-direction: row;
+        justify-content: space-around;
+    }
+    nav ul{
+        flex-direction: row;
+        width: 50%;
+    }
+    nav ul li a{        
+        padding: 5px;
+    }
+}*/
