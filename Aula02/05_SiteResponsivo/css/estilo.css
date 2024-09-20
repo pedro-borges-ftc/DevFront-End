@@ -10,12 +10,14 @@ h1,h2,h3{
 /*Navegação*/
 nav{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    justify-content: space-around;
     align-items: center;
     background-color: #177232;
 }
 
 nav > a{
+    padding: 25px;
     text-decoration: none;
     color: white;
     font-weight: 800;
@@ -25,10 +27,11 @@ nav > a{
 
 nav > ul{
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    width: 70%;
     align-items: center;
     list-style: none;
-    padding: 0;
+    padding: 25px;
 }
 
 nav ul li{
@@ -37,8 +40,8 @@ nav ul li{
 
 nav ul li a{
     display: inline-block;
-    padding: 10px 0;
-    width: 100%;
+    padding: 25px;
+    width: 70%;
     text-decoration: none;
     color: white;
 }
@@ -153,12 +156,13 @@ footer  a{
     padding: 5px;
 }
 
-/*Responsividade Tablet*/
-@media screen and (min-width:768px){
-    /*nav*/
+/*Responsividade PC*/
+@media (max-width: 1200px){
+	/*nav*/
     nav{
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
     }
     nav ul{
         flex-direction: row;
@@ -169,18 +173,36 @@ footer  a{
     }
 }
 
-/*Responsividade Mobile*/
-/*@media screen and (min-width:396px){
-    /*nav*//*
+/*Responsividade Tablet*/
+@media (max-width:768px){
+    /*nav*/
     nav{
-        flex-direction: row;
-        justify-content: space-around;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
     nav ul{
         flex-direction: row;
+        width: 60%;
+    }
+    nav ul li a{        
+        padding: 15px;
+    }
+}
+
+/*Responsividade Mobile*/
+@media (max-width:584px){
+    /*nav*/
+    nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    nav ul{
+        flex-direction: column;
         width: 50%;
     }
     nav ul li a{        
         padding: 5px;
     }
-}*/
+}
