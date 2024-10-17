@@ -44,6 +44,8 @@ function mostrarEndereco(dados) {
 }
 
 function inserirLinhaTable(c1, c2) {
+    var tblcep = document.getElementById("tblcep").querySelector("tbody")
+    
     let coluna1 = document.createElement('td')
     let coluna2 = document.createElement('td')
     let linha = document.createElement('tr')
