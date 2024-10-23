@@ -1,0 +1,112 @@
+/*------Tags estruturais--------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    /*variáveis*/
+    --bg-color: rgb(73,71,71);
+    --text-color: white;
+}
+
+body.white{
+    --bg-color: white ;
+    --text-color: rgb(73,71,71);
+}
+
+body.blue{
+    --bg-color: rgb(43, 6, 154) ;
+    --text-color: rgb(242,239,239);
+}
+
+body.purple{
+    --bg-color: rgb(84, 46, 199) ;
+    --text-color: rgb(242,239,239);
+}
+
+body.red{
+    --bg-color: rgb(168, 67, 78) ;
+    --text-color: rgb(242,239,239);
+}
+
+body.orange{
+    --bg-color: rgb(204, 129, 8) ;
+    --text-color: rgb(242,239,239);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+div{
+    text-align: center;
+    width: 300px;
+    margin: 6px auto;
+}
+
+header{
+    margin-top: 12px;
+    margin-bottom: 12px;
+    font-size: 24px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border-radius: 6px;
+}
+
+footer{
+    margin-bottom: 12px;
+    font-size: 12px;
+    opacity: 0.4;
+    transition: opacity 400ms;
+}
+
+footer:hover{
+    opacity: 1;
+}
+
+/*------Tags de conteúdo--------*/
+ul{
+    list-style: none;
+    margin: 20px 0;
+}
+
+input{
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    margin-bottom: 12px;
+    color: rgb(73,71,71);
+    border-radius: 6px;
+    text-align: center;
+}
+
+p{
+    font-size: 12px;
+    opacity: 0.8;
+    margin-bottom: 12px;
+    color: var(--text-color);
+}
+
+button{
+    height: 40px;
+    width: 200px;
+    align-items: center;
+    margin-bottom: 12px;
+    border-radius: 6px;
+    color: white;
+    background-color: green;
+    transition: background 400ms;
+}
+
+button:hover{
+    background: rgb(179, 177, 177);
+}
+
+a{ 
+    text-decoration: none;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
