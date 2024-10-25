@@ -76,7 +76,7 @@ function testadorTriangulos() {
 
     //Processamento dos dados
     if (l1 > 0 && l2 > 0 && l3 > 0) {
-        var eh_triangulo = (l1 + l2) > l3 || (l1 + l3) > l2 || (l3 + l2) > l1
+        var eh_triangulo = (l1 + l2) > l3 && (l1 + l3) > l2 && (l3 + l2) > l1
         var eh_equilatero = l1 == l2 && l2 == l3
         var eh_isoceles = l1 == l2 || l2 == l3 || l1 == l3
         //var eh_escaleno = l1 != l2 && l2 != l3 && l1 != l3
