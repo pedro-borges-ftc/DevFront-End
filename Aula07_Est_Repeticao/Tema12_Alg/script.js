@@ -65,10 +65,12 @@ function tabuada(){
     }else{
         let n = Number(num.value)
         tab.innerHTML=''
-        for(i=1; i<=10; i++){
+        var i = 1
+        while(i<=10){
             let item = document.createElement('option')
             item.text = `${n} x ${i} = ${n*i}`
             tab.appendChild(item)
+            i++
         }
     }
 }
