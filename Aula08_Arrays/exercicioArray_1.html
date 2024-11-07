@@ -6,129 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aula de pilha</title>
-    <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            font-family: 'Times New Roman', Times, serif;
-        }
-
-        body {
-            width: 100%;
-            height: 100vh;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: rgb(43, 39, 0);
-        }
-
-        .container {
-            width: 80%;
-            height: 80vh;
-            display: flex;
-            box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
-           
-        }
-
-        .form-image {
-            width: 50%;
-            display: flex;
-            margin: auto;
-            justify-content: center;
-            align-items: center;
-            background-color:none;
-            padding: 1rem;
-        }
-
-        .form-image img {
-            width: 41rem;
-        }
-
-        .form {
-            width: 50%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            background-color: #fff;
-            padding: 3rem;
-        }
-
-        .form-header {
-            margin-bottom: 3rem;
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .form-header h1::after {
-            content: '';
-            display: block;
-            width: 30rem;
-            height: 0.3rem;
-            background-color: #e2ab13;
-            margin: 0 auto;
-            position: absolute;
-            border-radius: 10px;
-        }
-
-        .input-group {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-            padding: 1rem 0;
-        }
-
-        .input-box {
-            display: block;
-            flex-direction: row;
-            margin-bottom: 1.1rem;
-        }
-
-        .input-box input{
-            margin: 0.6 rem 0;
-            padding: 0.8rem 1.2rem;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 1px 1px 6px black;          
-        }
-
-        .input-box input:houver {
-            background-color: #eeeeee75;
-           
-        }
-
-        .input-box input:focus-visible {
-            outline: 1px solid #6c63ff;
-        }
-
-        .input-box label,
-        .gender-title h6{
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: black;
-        }
-
-        .input-box button {
-            border: none;
-            color: rgb(88, 88, 0);
-            padding: 10px 12px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            border-radius: 20px;
-        }
-
-        .input-box label {
-            font-size: large;
-            text-align: left;
-            justify-content: center;
-            color: #5c5a00;
-        }
-    </style>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
    <div class="container">
         <div class="form-image">
@@ -170,70 +50,10 @@
                         <button type="button" onclick="exibirpilha()">Exibir</button>
                         <div class="textarea" id="area2" data-content="html"></div><br>
                     </div>
-                   
-                   
                 </div>
-
             </form>
         </div>
-
    </div>
-    <script>
-        var elem_pilhas = []
-
-        function adicionarelementos() {
-            let elemento = document.getElementById("elemento").value
-            elem_pilhas.push(elemento)
-            window.alert('Elemento adicionado!')
-        }
-        function removerelementos() {
-            if (elem_pilhas.length > 0) {
-                elem_pilhas.pop()
-                window.alert(`Elemento removido!`)
-                console.log(elem_pilhas)
-            }
-            else {
-                window.alert('A pilha está vazia!!!')
-                console.log(elem_pilhas)
-            }
-        }
-        function removertudo() {
-            while (elem_pilhas.length > 0) {
-                elem_pilhas.pop()
-            }
-            window.alert("Todos os elementos foram removidos!")
-        }
-        function ordernarelementos() {
-            elem_pilhas.sort()
-            window.alert(`Os elementos ordenados ficam dessa forma: ${elem_pilhas}`)
-        }
-        function exibirpilha() {
-            let area2 = document.getElementById("area2")
-            if (elem_pilhas.length === 0) {
-                area2.innerHTML = 'A pilha não contém elementos!'
-            }
-            else {
-                area2.innerHTML = `A pilha contem os elementos:[ ${elem_pilhas} ]`
-            }
-
-
-
-        }
-        function buscarelementos() {
-            let elemento = document.getElementById('busca').value
-            let posicao = elem_pilhas.indexOf(elemento)
-
-            if (posicao === -1) {
-                window.alert('Elemento não encontrado na pilha.')
-            }
-            else {
-                var area = document.getElementById("area");
-                window.alert(`A posição do elemento é: ${posicao}`)
-            }
-
-        }
-
-    </script>
 </body>
 
 </html>

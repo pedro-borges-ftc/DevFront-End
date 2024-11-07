@@ -10,6 +10,8 @@ while (opcao != 999) {
     console.log('Digite uma opção válida:')
     console.log('1 - Adicionar elemento')
     console.log('2 - Remover elemento')
+    console.log('3 - Buscar elemento')
+    console.log('4 - Ordenar elementos')
     console.log('999 - Encerrar o programa')
     //opcao = console.log(window.prompt())
 

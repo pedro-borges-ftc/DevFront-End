@@ -1,0 +1,119 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(43, 39, 0);
+}
+
+.container {
+    width: 80%;
+    height: 80vh;
+    display: flex;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.212);
+
+}
+
+.form-image {
+    width: 50%;
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    background-color: none;
+    padding: 1rem;
+}
+
+.form-image img {
+    width: 41rem;
+}
+
+.form {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 3rem;
+}
+
+.form-header {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+.form-header h1::after {
+    content: '';
+    display: block;
+    width: 30rem;
+    height: 0.3rem;
+    background-color: #e2ab13;
+    margin: 0 auto;
+    position: absolute;
+    border-radius: 10px;
+}
+
+.input-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.input-box {
+    display: block;
+    flex-direction: row;
+    margin-bottom: 1.1rem;
+}
+
+.input-box input {
+    margin: 0.6 rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 10px;
+    box-shadow: 1px 1px 6px black;
+}
+
+.input-box input:houver {
+    background-color: #eeeeee75;
+
+}
+
+.input-box input:focus-visible {
+    outline: 1px solid #6c63ff;
+}
+
+.input-box label,
+.gender-title h6 {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: black;
+}
+
+.input-box button {
+    border: none;
+    color: rgb(88, 88, 0);
+    padding: 10px 12px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 20px;
+}
+
+.input-box label {
+    font-size: large;
+    text-align: left;
+    justify-content: center;
+    color: #5c5a00;
+}
