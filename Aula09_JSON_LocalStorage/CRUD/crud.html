@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Storage com JSON</title>
+    <script type="text/javascript" src="funcoes.js"></script>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body onload = "Listar()" class="white">
+    <div>
+        <ul>
+            <li>
+                Código<br>
+                <input type="number" id="txtCodigo" />
+            </li>
+            <li>
+                Nome<br>
+                <input type="text" id="txtNome" />
+            </li>
+            <li>
+                Telefone<br>
+                <input type="text" id="txtTelefone" />
+            </li>
+            <li>
+                Email<br>
+                <input type="text" id="txtEmail" />
+            </li>
+            <li>
+                <button id="btnSalvar" onclick="salvar()">Salvar</button>
+            </li>
+        </ul>
+    </div>
+    <div>
+        <table id="tblListar" border="1">
+            <thead>
+                <td> </td>
+                <td>Código</td>
+                <td>Nome</td>
+                <td>Telefone</td>
+                <td>Email</td>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</body>
+</html>
