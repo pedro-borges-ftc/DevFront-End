@@ -1,0 +1,71 @@
+Roteiro da Oficina: Desenvolvimento de Aplicativos para Gestão Financeira Pessoal
+
+1. Apresentação da Oficina (10 minutos)
+	Boas-vindas e Introdução
+		Apresentação pessoal e breve introdução sobre seu background.
+		Objetivos da oficina: criar um aplicativo para gestão financeira pessoal.
+		Agenda da oficina e expectativas para os participantes.
+
+2. Conceitos de Gestão de Finanças (15 minutos)
+	Definição de Gestão Financeira Pessoal
+		Explicação sobre o que é gestão financeira pessoal.
+		Principais componentes: orçamento, controle de gastos, investimentos, poupança.
+	Ferramentas e Métodos
+		Diferentes métodos para controlar as finanças (planilhas, aplicativos, anotações).
+		Benefícios de usar um aplicativo para essa finalidade.
+
+3. Importância de uma Boa Gestão de Finanças (10 minutos)
+	Impacto na Vida Pessoal e Profissional
+		Exemplos de como uma boa gestão financeira pode melhorar a qualidade de vida.
+		Riscos de uma má gestão financeira.
+	Objetivos e Planejamento Financeiro
+		A importância de definir objetivos financeiros claros.
+		Estratégias para alcançar esses objetivos.
+
+4. Apresentação e Conceitos das Tecnologias Escolhidas (20 minutos)
+	HTML (HyperText Markup Language)
+		Estrutura básica de uma página web.
+		Elementos fundamentais do HTML.
+	CSS (Cascading Style Sheets)
+		Estilização de páginas web.
+		Seletores, propriedades e como aplicar estilos.
+	JavaScript
+		Introdução à programação com JavaScript.
+		Manipulação do DOM (Document Object Model).
+	GitHub
+		Conceito de controle de versão.
+		Introdução ao uso do GitHub para colaboração e versionamento de código.
+
+5. Hands-On: Desenvolvimento do Aplicativo (90 minutos)
+	Configuração do Ambiente de Desenvolvimento
+		Instalação e configuração de editores de código (ex: VSCode).
+		Criação de uma conta e repositório no GitHub.
+	Construção da Estrutura HTML
+		Criação da estrutura básica da página.
+		Adição de formulários para entrada de dados financeiros (receitas, despesas).
+	Estilização com CSS
+		Aplicação de estilos para melhorar a aparência da página.
+		Utilização de layout responsivo.
+	Interatividade com JavaScript
+		Adição de funcionalidades para calcular e exibir o saldo financeiro.
+		Implementação de funções para adicionar e remover transações.
+		Armazenamento dos dados no localStorage do navegador.
+	Publicação no GitHub Pages
+		Subir o projeto no GitHub.
+		Configurar o GitHub Pages para hospedar a aplicação.
+
+6. Conclusões (10 minutos)
+	Revisão do Projeto Desenvolvido
+		Recapitulação das funcionalidades implementadas.
+		Demonstração final do aplicativo.
+	Discussão sobre Desafios e Soluções
+		Principais desafios encontrados durante o desenvolvimento.
+		Soluções aplicadas e alternativas possíveis.
+
+7. Próximos Desafios (5 minutos)
+	Possíveis Melhorias no Aplicativo
+		Adição de novas funcionalidades (ex: gráficos de despesas, exportação de dados).
+		Melhoria da interface do usuário.
+	Continuação dos Estudos
+		Recursos e materiais recomendados para aprofundar o conhecimento em HTML, CSS, JavaScript.
+		Participação em comunidades de desenvolvimento e projetos colaborativos no GitHub.

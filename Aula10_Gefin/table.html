@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listagem de Registros Financeiros</title>
+    <link rel="stylesheet" href="table.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Listagem de Registros Financeiros</h1>
+        
+        <div class="btn-container">
+            <button class="btn" onclick="window.location.href='form.html'"> Incluir </button>
+        </div>
+        
+        <div class="filter-container">
+            <input type="date" id="start-date">
+            <input type="date" id="end-date">
+            <button class="btn-filter" onclick="aplicarFiltro()">Aplicar Filtro</button>
+        </div>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>Código</th>
+                    <th>Descrição</th>
+                    <th>Data</th>
+                    <th>Valor</th>
+                    <th>Tipo</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+
+            <tbody id="registros-financeiros">
+                <!-- Registros financeiros serão inseridos aqui -->
+            </tbody>
+
+            <tfoot>
+                <tr>
+                    <td colspan="3">Saldo Anterior</td>
+                    <td colspan="3" id="saldo-anterior">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total de Créditos</td>
+                    <td colspan="3" id="total-creditos">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Total de Débitos</td>
+                    <td colspan="3" id="total-debitos">R$ 0,00</td>
+                </tr>
+                <tr>
+                    <td colspan="3">Saldo Final</td>
+                    <td colspan="3" id="saldo-final">R$ 0,00</td>
+                </tr>
+            </tfoot>
+        </table>
+    </div>    
+    <script src="table.js"></script>    
+</body>
+</html>

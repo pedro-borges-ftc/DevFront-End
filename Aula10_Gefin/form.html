@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Incluir/Editar Registro Financeiro</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <h1 id="form-title">Incluir Novo Registro Financeiro</h1>
+        <form id="form-financeiro">
+            <input type="hidden" id="record-index">
+            
+            <label for="codigo">Código</label>
+            <input type="text" id="codigo" name="codigo" required>
+
+            <label for="descricao">Descrição</label>
+            <input type="text" id="descricao" name="descricao" required>
+
+            <label for="data">Data</label>
+            <input type="date" id="data" name="data" required>
+
+            <label for="valor">Valor</label>
+            <input type="number" step="0.01" id="valor" name="valor" required>
+
+            <label for="tipo">Tipo</label>
+            <select id="tipo" name="tipo" required>
+                <option value="credito">Crédito</option>
+                <option value="debito">Débito</option>
+            </select>
+
+            <input type="submit" value="Salvar Registro">
+        </form>
+    </div>
+    <script src="form.js"></script> 
+</body>
+</html>
