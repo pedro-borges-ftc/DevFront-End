@@ -1,3 +1,9 @@
+/* styles.css */
+:root {
+    --bg-color: blue;
+    --text-color: white;
+}
+
 /*------Tags estruturais--------*/
 *{
     margin: 0;

@@ -1,15 +1,11 @@
 body{
-    background-color: rgb(15, 183, 38);
-}
-h4{
-    color: white;
-    border: 3px solid white;
-    border-radius: 15px;
+    background-color: rgb(18, 130, 33);
 }
 p{
     color: white;
     font-size: large;
     border: 1px solid white;
+    border-radius: 10px;
 }
 
 /* Estilo para o botão flutuante */

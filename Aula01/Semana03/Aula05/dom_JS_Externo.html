@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exemplo DOM HTML</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
 </head>
 <body id="bd">
     <p id="demonstracao"> Clique no botão para mudar a cor desse parágrafo. </p>
@@ -15,22 +17,5 @@
 
     <button onclick="corBody()"> PLANO FUNDO </button>
 
-
-<script>
-    function corVermelho() {
-        var x = document.getElementById("demonstracao")
-        x.style.color = "red"
-    }
-    function corAzul() {
-        var x = document.getElementById("demonstracao")
-        x.style.color = "blue"
-    }
-    function corBody() {
-        var x = document.getElementById("bd")
-        x.style.backgroundColor = "gray"
-        var x = document.getElementById("demonstracao")
-        x.style.color = "white"
-    }
-</script>
 </body>
 </html>
