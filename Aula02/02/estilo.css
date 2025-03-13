@@ -1,25 +1,29 @@
 p{
     color:blue;
-    width: 500px;
-    border: 1px solid black;
-    margin: 10px;
+    width: 80%;
+    border: 3px solid rgb(10, 138, 51);
+    margin: 5px;
+    padding: 15px;
 }
 html{
     background-color: azure;
 }
 body{
-    width: 80%;
+    width: 90%;
     /*flex box*/ 
     margin: 0 auto;
-    padding: 20px 20px 30px 20px ;
-    border: 3px solid black;
+    /*padding: 20px 20px 30px 20px ;*/
+    border: 2px solid black;
     text-align: center;
 }
 h1{
-    padding: 20px 0 ;
-    border: 2px solid blue;
+    width: 80%;
+    margin: 5px;
+    padding: 15px;
+    border: 3px solid blue;
 }
 main{
+    width: 80%;
     padding: 20px 20px 30px 20px ;
     border: 8px solid red;
 }
