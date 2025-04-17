@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <!-- Link para o CSS -->
+    <link rel="stylesheet" href="estilo.css">
+    <!-- Link para o JavaScript -->
+     <script src="script.js"></script>
+</head>
+<body class="blue">
+    
+    <header>
+        <div><h1>Calculadora de Juros Simples</h1></div>
+    </header>
+
+    <main>
+        <ul>
+            <li><input type="number" name="" id="txtvalorinicial" placeholder="Digite o Valor Inicial (R$)"></li>
+
+            <li><input type="number" name="" id="txtaxa" placeholder="Digite o % da taxa (meses)"></li>
+
+            <li><input type="number" name="" id="txtperiodo" placeholder="Digite o período (meses)"></li>
+            
+            <li><button onclick="JurosSimples()">Calcular</button></li>
+            <li>
+                <p>Valor do Juros (R$)</p>
+                <input type="text" name="" id="txtjuros">
+            </li>
+            <li>
+                <p>Valor total final (R$)</p>
+                <input type="text" name="" id="txttotal">
+            </li>
+        </ul>    
+    </main>
+
+    <footer>
+        <h3>Desenvolvimento Front-End</h3>
+    </footer>
+
+</body>
+</html>
