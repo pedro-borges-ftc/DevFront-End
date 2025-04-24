@@ -114,7 +114,7 @@ function calcularFolhaSalarial() {
     var salario = valorhora * totalhoras
     var percIR = calcularPercentualIR(salario)
     var descontoIR = salario * percIR
-    var descontoINSS = salario * 0.1
+    var descontoINSS = salario * 10 / 100
     var totalDescontos = descontoIR + descontoINSS
     var salarioLiquido = salario - totalDescontos
     percIR *= 100
