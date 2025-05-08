@@ -57,20 +57,27 @@ function crescimentoPopulacional(){
 
 //2_geradortabuada
 function tabuada(){
-    let num = document.getElementById("txtnum")
+    let num = Number(document.getElementById("txtnum").value)
     let tab = document.getElementById('seltab')
     
-    if(num.value.length == 0){
+    if(num == 0){
         window.alert("Por favor, digite um número!")
     }else{
-        let n = Number(num.value)
         tab.innerHTML=''
-        var i = 1
-        while(i<=10){
+        //for
+        for(let i = 1; i <= 10; i++){
             let item = document.createElement('option')
-            item.text = `${n} x ${i} = ${n*i}`
+            item.text = `${num} x ${i} = ${num*i}`
             tab.appendChild(item)
-            i++
         }
+
+        //While
+        // var i = 1
+        // while (i <= 10) {
+        //     let item = document.createElement('option')
+        //     item.text = `${num} x ${i} = ${nums * i}`
+        //     tab.appendChild(item)
+        //     i++
+        // }
     }
 }
