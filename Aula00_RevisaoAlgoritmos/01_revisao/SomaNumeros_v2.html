@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Números v2</title>
+
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+        h3{
+          color: blue;  
+        }
+    </style>
+</head>
+<body>
+    <h3>Programa que Soma dois números</h3>
+    
+    <script>
+        var num1 = Number(window.prompt('Digite o primeiro número:'))
+        var num2 = Number(window.prompt('Digite o segundo número:'))
+
+        var soma = num1 + num2
+        document.writeln(`<p>A soma de ${num1} + ${num2} = ${soma.toFixed(2)} </p>`)
+    </script>
+</body>
+</html>
