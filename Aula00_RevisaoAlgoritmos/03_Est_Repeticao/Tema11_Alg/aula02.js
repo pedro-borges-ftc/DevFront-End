@@ -1,4 +1,4 @@
-var numero = 3
+var numero = 7
 var i = 1       //variável controladora do loop
 var total
 
