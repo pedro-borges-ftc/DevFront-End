@@ -54,9 +54,10 @@ main{
 }
 
 header{
+    text-align: center;
     margin-top: 12px;
     margin-bottom: 12px;
-    font-size: 14px;
+    font-size: 28px;
     background-color: var(--text-color);
     color: var(--bg-color);
     border-radius: 6px;
