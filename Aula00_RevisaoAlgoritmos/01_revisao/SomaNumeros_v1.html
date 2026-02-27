@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma Números</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <header>
+        Soma de Números
+    </header>
+    <div>
+        <ul>
+            <li>
+                <input type="number" id="num1" placeholder="Digite o 1º número">
+            </li>
+            <li>
+                <input type="number" id="num2" placeholder="Digite o 2º número">
+            </li>
+            <li>
+                <button onclick="somar()">Somar</button>
+            </li>
+            <li>
+                <p id="resultado">RESULTADO</p>
+            </li>
+        </ul>        
+    </div>
+    <footer>
+        <h3>Desenvolvimento Front-End</h3>
+    </footer>
+    <script>
+        function somar(){
+            var x = document.getElementById("num1").value;
+            var y = document.getElementById("num2").value;
+            var resultado = document.getElementById("resultado");
+            var soma = Number(x) + Number(y);
+            resultado.innerHTML = "A soma é " + soma;
+        }   
+    </script>
+</body>
+</html>
