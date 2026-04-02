@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bem-vindos à Disciplina de Desenvolvimento Front-End</title>
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111827;
+      --card: rgba(255, 255, 255, 0.08);
+      --text: #f8fafc;
+      --muted: #cbd5e1;
+      --primary: #38bdf8;
+      --secondary: #22c55e;
+      --accent: #a78bfa;
+      --shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+      --border: rgba(255, 255, 255, 0.12);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(56, 189, 248, 0.18), transparent 30%),
+        radial-gradient(circle at bottom right, rgba(167, 139, 250, 0.18), transparent 30%),
+        linear-gradient(135deg, var(--bg), var(--bg-soft));
+      color: var(--text);
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 24px 0;
+      position: sticky;
+      top: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(15, 23, 42, 0.45);
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      z-index: 10;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+
+    .logo {
+      font-size: 1.1rem;
+      font-weight: bold;
+      letter-spacing: 0.5px;
+    }
+
+    .logo span {
+      color: var(--primary);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 18px;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      text-decoration: none;
+      transition: 0.3s;
+      font-size: 0.95rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+    }
+
+    .hero {
+      min-height: calc(100vh - 90px);
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      align-items: center;
+      gap: 40px;
+      padding: 48px 0 64px;
+    }
+
+    .hero-content h1 {
+      font-size: clamp(2.2rem, 5vw, 4.2rem);
+      line-height: 1.1;
+      margin-bottom: 18px;
+    }
+
+    .hero-content h1 span {
+      color: var(--primary);
+    }
+
+    .hero-content p {
+      font-size: 1.08rem;
+      color: var(--muted);
+      line-height: 1.7;
+      max-width: 640px;
+      margin-bottom: 28px;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-bottom: 28px;
+    }
+
+    .btn {
+      padding: 14px 22px;
+      border-radius: 14px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: transform 0.25s ease, opacity 0.25s ease, background 0.25s ease;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid transparent;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      opacity: 0.95;
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      color: white;
+      box-shadow: var(--shadow);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border-color: var(--border);
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(100px, 1fr));
+      gap: 16px;
+    }
+
+    .stat {
+      background: var(--card);
+      border: 1px solid var(--border);
+      backdrop-filter: blur(10px);
+      padding: 18px;
+      border-radius: 20px;
+      box-shadow: var(--shadow);
+      text-align: center;
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.5rem;
+      margin-bottom: 6px;
+      color: var(--primary);
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-size: 0.92rem;
+    }
+
+    .hero-card {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-card::before {
+      content: "";
+      position: absolute;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(56, 189, 248, 0.28), transparent 70%);
+      top: -60px;
+      right: -60px;
+      border-radius: 50%;
+    }
+
+    .code-window {
+      background: #020617;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 18px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .dots {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+    }
+
+    .dot.red { background: #fb7185; }
+    .dot.yellow { background: #facc15; }
+    .dot.green { background: #4ade80; }
+
+    .code-line {
+      font-family: Consolas, monospace;
+      color: #e2e8f0;
+      margin: 8px 0;
+      font-size: 0.95rem;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid var(--primary);
+      animation: typing 5s steps(40, end) infinite alternate, blink 0.8s step-end infinite;
+    }
+
+    .code-line:nth-child(2) { animation-delay: 0.3s; }
+    .code-line:nth-child(3) { animation-delay: 0.6s; }
+    .code-line:nth-child(4) { animation-delay: 0.9s; }
+
+    .tag { color: #38bdf8; }
+    .attr { color: #f9a8d4; }
+    .value { color: #86efac; }
+
+    section {
+      padding: 40px 0 80px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 36px;
+    }
+
+    .section-title h2 {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      margin-bottom: 12px;
+    }
+
+    .section-title p {
+      color: var(--muted);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 24px;
+      box-shadow: var(--shadow);
+      transition: transform 0.25s ease, border-color 0.25s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      border-color: rgba(56, 189, 248, 0.4);
+    }
+
+    .card .icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      font-size: 1.5rem;
+      margin-bottom: 16px;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.2), rgba(167, 139, 250, 0.2));
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      font-size: 1.2rem;
+    }
+
+    .card p {
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .cta {
+      margin-top: 40px;
+      text-align: center;
+      background: linear-gradient(135deg, rgba(56, 189, 248, 0.15), rgba(167, 139, 250, 0.12));
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 36px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h3 {
+      font-size: 1.8rem;
+      margin-bottom: 12px;
+    }
+
+    .cta p {
+      color: var(--muted);
+      max-width: 700px;
+      margin: 0 auto 20px;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding: 26px 0 36px;
+      text-align: center;
+      color: var(--muted);
+      border-top: 1px solid rgba(255,255,255,0.06);
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: 0.8s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @keyframes typing {
+      from { width: 0; }
+      to { width: 100%; }
+    }
+
+    @keyframes blink {
+      50% { border-color: transparent; }
+    }
+
+    @media (max-width: 920px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-stats {
+        grid-template-columns: 1fr;
+      }
+
+      .grid {
+        grid-template-columns: 1fr;
+      }
+
+      .buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="logo">Front<span>End</span> Class</div>
+      <ul class="nav-links">
+        <li><a href="#inicio">Início</a></li>
+        <li><a href="#trilha">Trilha</a></li>
+        <li><a href="#competencias">Competências</a></li>
+        <li><a href="#boas-vindas">Boas-vindas</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="container hero" id="inicio">
+      <div class="hero-content reveal">
+        <h1>Bem-vindos à disciplina de <span>Desenvolvimento Front-End</span></h1>
+        <p>
+          Prepare-se para transformar ideias em interfaces modernas, responsivas e interativas.
+          Nesta jornada, vamos explorar HTML, CSS e JavaScript para construir experiências digitais
+          que unem criatividade, técnica e usabilidade.
+        </p>
+
+        <div class="buttons">
+          <a class="btn btn-primary" href="#boas-vindas">Começar jornada</a>
+          <a class="btn btn-secondary" href="#trilha">Ver conteúdos</a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <strong>HTML</strong>
+            <span>Estrutura semântica</span>
+          </div>
+          <div class="stat">
+            <strong>CSS</strong>
+            <span>Estilo e responsividade</span>
+          </div>
+          <div class="stat">
+            <strong>JS</strong>
+            <span>Interatividade e lógica</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-card reveal">
+        <div class="code-window">
+          <div class="dots">
+            <span class="dot red"></span>
+            <span class="dot yellow"></span>
+            <span class="dot green"></span>
+          </div>
+          <div class="code-line"><span class="tag">&lt;h1&gt;</span>Seja bem-vindo(a)!<span class="tag">&lt;/h1&gt;</span></div>
+          <div class="code-line"><span class="tag">&lt;style&gt;</span> criatividade + design <span class="tag">&lt;/style&gt;</span></div>
+          <div class="code-line"><span class="tag">&lt;script&gt;</span> interatividade em ação <span class="tag">&lt;/script&gt;</span></div>
+          <div class="code-line"><span class="tag">&lt;div</span> <span class="attr">class</span>=<span class="value">"futuro-dev"</span><span class="tag">&gt;</span>Seu projeto começa aqui<span class="tag">&lt;/div&gt;</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="trilha">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>O que vamos desenvolver</h2>
+          <p>
+            Ao longo da disciplina, você irá compreender os fundamentos do front-end e aplicar esse conhecimento
+            em páginas e interfaces com foco em organização visual, acessibilidade e experiência do usuário.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card reveal">
+            <div class="icon">🏗️</div>
+            <h3>Estrutura com HTML</h3>
+            <p>Aprenda a criar páginas bem organizadas com elementos semânticos, formulários, listas, tabelas e boas práticas de marcação.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🎨</div>
+            <h3>Estilo com CSS</h3>
+            <p>Explore cores, tipografia, espaçamento, flexbox, grid e responsividade para construir layouts modernos e elegantes.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">⚡</div>
+            <h3>Interação com JavaScript</h3>
+            <p>Dê vida às interfaces com eventos, manipulação do DOM, validações e comportamentos dinâmicos voltados para o usuário.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="competencias">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Competências que você vai fortalecer</h2>
+          <p>
+            Mais do que escrever código, esta disciplina incentiva raciocínio lógico, visão de produto,
+            senso estético e capacidade de construir soluções digitais com propósito.
+          </p>
+        </div>
+
+        <div class="grid">
+          <article class="card reveal">
+            <div class="icon">📱</div>
+            <h3>Responsividade</h3>
+            <p>Crie interfaces que se adaptem bem a celulares, tablets e desktops, oferecendo uma navegação fluida em qualquer tela.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🧠</div>
+            <h3>Lógica e Organização</h3>
+            <p>Desenvolva a habilidade de estruturar soluções, organizar componentes visuais e manter o código claro e reutilizável.</p>
+          </article>
+
+          <article class="card reveal">
+            <div class="icon">🚀</div>
+            <h3>Criatividade aplicada</h3>
+            <p>Transforme ideias em experiências digitais mais bonitas, intuitivas e funcionais, pensando sempre em quem vai usar.</p>
+          </article>
+        </div>
+
+        <div class="cta reveal" id="boas-vindas">
+          <h3>Seu próximo projeto começa agora</h3>
+          <p>
+            Esta disciplina é um convite para experimentar, errar, aprender e evoluir. Cada linha de código escrita aqui
+            será um passo importante na sua formação como desenvolvedor(a) front-end.
+          </p>
+          <a href="#inicio" class="btn btn-primary">Explorar novamente</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Disciplina de Desenvolvimento Front-End • Bem-vindos à sua jornada de criação na web</p>
+    </div>
+  </footer>
+
+  <script>
+    const reveals = document.querySelectorAll('.reveal');
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.15 });
+
+    reveals.forEach((item) => observer.observe(item));
+
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth' });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
