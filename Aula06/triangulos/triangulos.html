@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificador de Triangulos</title>
+    <link rel="stylesheet" href="triangulos.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Classificador de Triangulos</h1>
+            <p class="descricao">
+                Informe os tres lados e descubra a classificacao do triangulo.
+            </p>
+
+            <form id="form-triangulo">
+                <label for="lado1">L1</label>
+                <input type="number" id="lado1" min="0" step="any" placeholder="Digite o primeiro lado">
+
+                <label for="lado2">L2</label>
+                <input type="number" id="lado2" min="0" step="any" placeholder="Digite o segundo lado">
+
+                <label for="lado3">L3</label>
+                <input type="number" id="lado3" min="0" step="any" placeholder="Digite o terceiro lado">
+
+                <button type="button" onclick="classificarTriangulo()">Classificar</button>
+            </form>
+
+            <div id="resultado" class="resultado">
+                Preencha os tres lados para verificar o tipo do triangulo.
+            </div>
+        </section>
+    </main>
+
+    <script src="triangulos.js"></script>
+</body>
+</html>

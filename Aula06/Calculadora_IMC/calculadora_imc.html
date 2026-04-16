@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora de IMC</title>
+    <link rel="stylesheet" href="calculadora_imc.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Calculadora de IMC</h1>
+            <p class="descricao">
+                Informe seu peso e sua altura para verificar se voce esta no peso ideal.
+            </p>
+
+            <form id="form-imc">
+                <label for="peso">Digite o seu peso (kg):</label>
+                <input type="number" id="peso" min="0" step="any" placeholder="Ex: 70">
+
+                <label for="altura">Digite a sua altura (m):</label>
+                <input type="number" id="altura" min="0" step="any" placeholder="Ex: 1.75">
+
+                <button type="submit">Calcular IMC</button>
+            </form>
+
+            <div id="resultado" class="resultado">
+                Preencha os campos para calcular o IMC.
+            </div>
+        </section>
+    </main>
+
+    <script src="calculadora_imc.js"></script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classificacao de IMC</title>
+    <link rel="stylesheet" href="classificacao_imc.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <h1>Classificacao de IMC</h1>
+            <p class="descricao">
+                Informe seu peso e sua altura para descobrir a classificacao do IMC segundo a OMS.
+            </p>
+
+            <form id="form-imc">
+                <label for="peso">Digite o seu peso (kg):</label>
+                <input type="number" id="peso" min="0" step="any" placeholder="Ex: 70">
+
+                <label for="altura">Digite a sua altura (m):</label>
+                <input type="number" id="altura" min="0" step="any" placeholder="Ex: 1.75">
+
+                <button type="submit">Classificar IMC</button>
+            </form>
+
+            <div id="resultado" class="resultado">
+                Preencha os campos para calcular e classificar o IMC.
+            </div>
+        </section>
+    </main>
+
+    <script src="classificacao_imc.js"></script>
+</body>
+</html>
