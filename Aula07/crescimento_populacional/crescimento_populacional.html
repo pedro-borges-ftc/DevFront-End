@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crescimento Populacional</title>
+    <link rel="stylesheet" href="crescimento_populacional.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Crescimento Populacional</h1>
+        <form id="form-crescimento">
+            <label for="ano-inicial">Ano Inicial:</label>
+            <input type="number" id="ano-inicial" required><br><br>
+
+            <label for="populacao-inicial">População no Ano Inicial:</label>
+            <input type="number" id="populacao-inicial" required><br><br>
+
+            <label for="percentual-crescimento">Percentual de Crescimento (%):</label>
+            <input type="number" id="percentual-crescimento" step="0.01" required><br><br>
+
+            <label for="ano-final">Ano Final:</label>
+            <input type="number" id="ano-final" required><br><br>
+
+            <button type="button" id="calcular">Calcular</button>
+        </form>
+        <div id="resultados"></div>
+    </div>
+    <script src="crescimento_populacional.js"></script>
+</body>
+</html>

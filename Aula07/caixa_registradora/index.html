@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caixa Registradora</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="container">
+    <h1>Caixa Registradora</h1>
+
+    <section class="card">
+      <label for="productValue">Valor do produto (R$):</label>
+      <input id="productValue" type="number" step="0.01" min="0" placeholder="Digite o valor" />
+      <button id="addButton" type="button">Adicionar produto</button>
+    </section>
+
+    <section class="card summary">
+      <h2>Lista de compras</h2>
+      <ul id="productList" class="product-list"></ul>
+      <div class="totals">
+        <div>
+          <label for="totalValue">Total (R$):</label>
+          <input id="totalValue" type="text" readonly value="0,00" />
+        </div>
+        <div>
+          <label for="paidValue">Valor pago (R$):</label>
+          <input id="paidValue" type="number" step="0.01" min="0" placeholder="Digite o valor pago" />
+        </div>
+        <div>
+          <label for="changeValue">Troco (R$):</label>
+          <input id="changeValue" type="text" readonly value="0,00" />
+        </div>
+      </div>
+      <button id="calculateChangeButton" type="button">Calcular troco</button>
+      <button id="clearButton" type="button" class="secondary">Limpar</button>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
