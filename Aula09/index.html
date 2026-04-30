@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciador de Array - Tabela Interativa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Gerenciador de Array</h1>
+        <p class="subtitle">Operações completas com arrays: inserção, remoção, ordenação e busca</p>
+
+        <div class="input-section">
+            <div class="input-group">
+                <input 
+                    type="text" 
+                    id="inputElement" 
+                    placeholder="Digite um elemento (número ou texto)"
+                    class="input-field"
+                >
+                <button id="btnAdd" class="btn btn-success">Adicionar</button>
+            </div>
+
+            <div class="operations">
+                <button id="btnSort" class="btn btn-primary">Ordenar (A-Z)</button>
+                <button id="btnSortNumeric" class="btn btn-primary">Ordenar (0-9)</button>
+                <button id="btnReverse" class="btn btn-info">Inverter Ordem</button>
+                <button id="btnClear" class="btn btn-danger">Limpar Tudo</button>
+            </div>
+        </div>
+
+        <div class="search-section">
+            <input 
+                type="text" 
+                id="searchInput" 
+                placeholder="Buscar um elemento..."
+                class="input-field"
+            >
+            <button id="btnSearch" class="btn btn-secondary">Buscar</button>
+            <span id="searchResult" class="search-result"></span>
+        </div>
+
+        <div class="stats">
+            <p>Total de elementos: <strong id="totalElements">0</strong></p>
+        </div>
+
+        <div class="table-container">
+            <table class="array-table">
+                <thead>
+                    <tr>
+                        <th>Índice</th>
+                        <th>Elemento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="arrayTableBody">
+                    <tr class="empty-row">
+                        <td colspan="3">Array vazio. Adicione elementos para começar.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="info-section">
+            <h3>Instruções:</h3>
+            <ul>
+                <li><strong>Adicionar:</strong> Digite um elemento e clique em "Adicionar" ou pressione Enter</li>
+                <li><strong>Remover:</strong> Clique no ícone de lixeira na coluna de ações</li>
+                <li><strong>Ordenar:</strong> Use os botões de ordenação (alfabética ou numérica)</li>
+                <li><strong>Buscar:</strong> Digite um elemento na caixa de busca e clique em "Buscar"</li>
+                <li><strong>Inverter:</strong> Reverte a ordem dos elementos</li>
+            </ul>
+        </div>
+
+        <div class="json-display">
+            <h3>Array em JSON:</h3>
+            <div id="jsonOutput" class="json-box">[]</div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
