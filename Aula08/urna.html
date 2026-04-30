@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urna on-line</title>
+    <link rel="stylesheet" href="urna.css">
+    <script src="urna.js" defer></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>Urna on-line</h1>
+    </header>
+    <section>
+        <div id="divtabela">
+            <table id="tblsimulacao" border="1">
+                <thead>
+                    <td>Número</td>
+                    <td>Candidato</td>
+                </thead>
+                <tr>
+                    <td>0</td>
+                    <td>Branco</td>
+                </tr>
+                <tr>
+                    <td>13</td>
+                    <td>Fulano</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>Beltrano</td>
+                </tr>
+                <tr>
+                    <td>99</td>
+                    <td>Nulo</td>
+                </tr>
+                <tbody></tbody>
+            </table>
+        </div>
+        <hr>
+        <div id="diventrada">
+            <label for="txtcandidato">Digite o seu voto</label><br>
+            <input type="number" id="txtcandidato"><br>
+
+            <button id="btnconfirmar">Confirma</button>
+            <br>
+        </div>
+        <hr>
+        <div id="divresultado">
+
+        </div>
+    </section>
+    <footer>Desenvolvido em Dev Front-End</footer>
+</body>
+
+</html>

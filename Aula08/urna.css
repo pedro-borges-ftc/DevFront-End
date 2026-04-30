@@ -1,0 +1,37 @@
+body {
+    background-color: rgb(49, 53, 110);
+    color: white;
+}
+
+section {
+    width: 300px;
+    background-color: white;
+    border-radius: 8px;
+    margin: auto;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+}
+
+div {
+    color: black;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+table {
+    margin: auto;
+}
+
+footer,
+header,
+div {
+    text-align: center;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+button {
+    background-color: rgb(48, 128, 54);
+    color: white;
+    margin-top: 8px;
+}
