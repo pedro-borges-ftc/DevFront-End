@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD com LocalStorage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main class="container">
+        <section class="form-card">
+            <h1>Cadastro de Contatos</h1>
+            <p>Preencha o formulario para salvar os dados no localStorage usando JSON.</p>
+
+            <form id="formContato">
+                <input type="hidden" id="indiceEdicao">
+
+                <label for="codigo">Codigo</label>
+                <input type="text" id="codigo" name="codigo" placeholder="Ex: 001" required>
+
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite o nome" required>
+
+                <label for="telefone">Telefone</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(00) 00000-0000" required>
+
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" placeholder="email@exemplo.com" required>
+
+                <div class="botoes-form">
+                    <button type="submit" id="btnSalvar">Salvar</button>
+                    <button type="button" id="btnCancelar" class="btn-secundario">Cancelar</button>
+                </div>
+            </form>
+        </section>
+
+        <section class="lista-card">
+            <div class="cabecalho-lista">
+                <h2>Contatos cadastrados</h2>
+                <button type="button" id="btnLimpar" class="btn-perigo">Limpar tudo</button>
+            </div>
+
+            <div class="tabela-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Codigo</th>
+                            <th>Nome</th>
+                            <th>Telefone</th>
+                            <th>E-mail</th>
+                            <th>Acoes</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tabelaContatos"></tbody>
+                </table>
+            </div>
+
+            <p id="mensagemVazia" class="mensagem-vazia">Nenhum contato cadastrado.</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
