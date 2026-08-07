@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tratamento String</title>
+
+    <style>
+        body{
+            font: normal 20pt arial;
+        }
+        h3{
+          color: blue;  
+        }
+    </style>
+</head>
+<body>
+    <h3>Tratamento de String</h3>
+    
+    <script>
+        var frase = window.prompt('Digite uma frase:')
+
+        document.writeln(`<p>frase: ${frase} </p>`)
+        document.writeln(`<p>length: ${frase.length} </p>`)
+        document.writeln(`<p>toUpperCase: ${frase.toUpperCase()} </p>`)
+        document.writeln(`<p>toLowerCase: ${frase.toLowerCase()} </p>`)
+        document.writeln(`<p>replaceAll: ${frase.replaceAll(' ','_')} </p>`)
+
+    </script>
+</body>
+</html>
