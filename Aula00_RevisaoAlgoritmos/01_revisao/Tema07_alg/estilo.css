@@ -54,13 +54,14 @@ main{
 }
 
 header{
+    /*width: 300px;*/
     text-align: center;
     margin-top: 12px;
     margin-bottom: 12px;
-    font-size: 28px;
+    font-size: 20px;
     background-color: var(--text-color);
     color: var(--bg-color);
-    border-radius: 6px;
+    border-radius: 10px;
 }
 
 footer{
