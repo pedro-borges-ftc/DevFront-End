@@ -101,12 +101,12 @@ p{
 
 button{
     height: 40px;
-    width: 200px;
+    width: 150px;
     align-items: center;
     margin-bottom: 12px;
     border-radius: 6px;
     color: white;
-    background-color: green;
+    background-color: rgb(49, 117, 49);
     transition: background 400ms;
 }
 

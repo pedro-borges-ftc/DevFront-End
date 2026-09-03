@@ -1,3 +1,8 @@
+function AloMundo(){
+    alert('AloMundo')
+    console.log('AloMundo')
+}
+
 function JurosSimples(){
     //1) Leitura dos dados do HTML
     //Comando para acessar o input html através do JS 
