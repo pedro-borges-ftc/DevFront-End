@@ -7,7 +7,7 @@ form.addEventListener("submit", function (event) {
     const peso = Number(document.getElementById("peso").value);
     const altura = Number(document.getElementById("altura").value);
 
-    if (!peso || !altura || altura <= 0) {
+    if (!peso || !altura || altura <= 0 || peso <= 0) {
         resultado.textContent = "Informe valores validos para peso e altura.";
         return;
     }
