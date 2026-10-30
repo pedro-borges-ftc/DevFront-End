@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#193d35">
+    <title>Urna on-line · Simulador</title>
+    <link rel="stylesheet" href="urna.css">
+    <script src="urna.js" defer></script>
+</head>
+<body>
+    <header class="topbar"><a class="brand" href="urna.html"><span class="brand-mark" aria-hidden="true">▥</span> urna<span class="brand-light">on-line</span></a><span class="simulation"><span></span> Ambiente de simulação</span></header>
+    <main>
+        <div class="intro"><p class="eyebrow">CADA ESCOLHA CONTA</p><h1>Seu voto.<br>Sua participação.</h1><p>Um espaço simples para aprender como funciona<br class="desktop-break"> a votação e acompanhar a apuração.</p></div>
+        <section class="voting-card" aria-labelledby="voting-title">
+            <div class="card-heading"><div><p class="eyebrow">SIMULADOR ELEITORAL</p><h2 id="voting-title">Hora de escolher</h2></div><span class="step">01 / VOTAÇÃO</span></div>
+            <div class="voting-grid">
+                <div id="divtabela"><h3>Conheça as opções</h3><p class="helper">Use o número correspondente ao seu voto.</p>
+                    <table id="tblsimulacao"><caption class="sr-only">Números disponíveis para votação</caption><thead><tr><th scope="col">NÚMERO</th><th scope="col">CANDIDATO</th></tr></thead><tbody>
+                        <tr><td><span class="number">13</span></td><td><strong>Fulano</strong><span class="option-note">Candidato</span></td></tr>
+                        <tr><td><span class="number">22</span></td><td><strong>Beltrano</strong><span class="option-note">Candidato</span></td></tr>
+                        <tr><td><span class="number neutral">0</span></td><td>Branco</td></tr>
+                        <tr><td><span class="number neutral">99</span></td><td>Nulo</td></tr>
+                    </tbody></table>
+                    <p class="table-note">Outros números também são contabilizados como nulos, exceto 999.</p>
+                </div>
+                <form id="diventrada" novalidate><span class="ballot-icon" aria-hidden="true">↓</span><h3>Digite o seu voto</h3><p class="helper">Confira o número antes de confirmar.</p><label for="txtcandidato">Número do candidato</label><input type="text" inputmode="numeric" autocomplete="off" maxlength="3" id="txtcandidato" placeholder="— —" aria-describedby="input-help vote-message"><p id="input-help" class="input-help">0 branco · 13 Fulano · 22 Beltrano · 99 nulo</p><button type="submit" id="btnconfirmar">Confirmar voto <span aria-hidden="true">↗</span></button><p id="vote-message" role="status" aria-live="polite"></p><p class="privacy-note">Votos registrados apenas nesta sessão.</p></form>
+            </div>
+            <div class="card-footer"><span><span class="status-dot"></span> Urna pronta para receber votos</span><button type="button" id="btnresultado">Ver apuração <span aria-hidden="true">→</span></button></div>
+        </section>
+        <section id="divresultado" class="results" aria-labelledby="results-title" hidden></section>
+        <p class="instruction">Você também pode digitar <kbd>999</kbd> para consultar o resultado.</p>
+    </main>
+    <footer><span>Desenvolvido em Dev Front-End</span><span>Exercício de cidadania, na prática.</span></footer>
+</body>
+</html>
